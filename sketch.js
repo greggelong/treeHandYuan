@@ -1,9 +1,13 @@
-let hand
+let hand 
+let cnv
 function preload(){
   hand = loadImage("handd.png")
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  cnv = createCanvas(975, 900);
+  let cx = floor((windowWidth - cnv.width) / 2);
+  let cy = floor((windowHeight - cnv.height) / 2);
+  cnv.position(cx, cy);
 
   background(0);
   stroke(162, 152, 140)//(207, 202, 208)//(149, 144, 114)//('#AEA294');  
@@ -14,7 +18,7 @@ function setup() {
   //hand.resize(50,0)
   imageMode(CENTER)
   //branch(300, 4,65);
-  frameRate(25)
+  frameRate(35)
 }
 
 
@@ -22,7 +26,7 @@ function draw(){
   //resetMatrix()
   translate(width / 2, height);
    background(0)
-   branch(390, 5,frameCount%360);
+   branch(300, 5,frameCount%360);
 }
 
 function branch(len, d,theta) {
