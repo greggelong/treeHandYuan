@@ -1,7 +1,7 @@
 let hand 
 let cnv
 function preload(){
-  hand = loadImage("handd.png")
+  hand = loadImage("handsm.png")
 }
 function setup() {
   cnv = createCanvas(975, 900);
